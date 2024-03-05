@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from '../img/logo.svg';
-import '../css/App.css';
+import React from "react"
+import logo from "../img/logo.svg"
+import "../css/App.css"
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <p>Launch Statistics coming soon...</p>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
