@@ -68,4 +68,7 @@
   .home-details-link {
     @apply uppercase mt-6 border p-4 border-2 text-small font-medium
   }
+  .footer {
+    @apply h-10 fixed bg-transparent bottom-0 w-full text-light flex justify-center uppercase gap-4 sm:gap-8 text-sm sm:text-base
+  }
 }
