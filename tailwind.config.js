@@ -7,7 +7,7 @@ module.exports = {
         sans: ["'16px/26px', 'D-DIN-Regular','Arial','Verdana','sans-serif'"]
       },
       backgroundImage: {
-        homepage: "url('../img/homepage-bg.jpg')"
+        homepage: "url('../img/home-bg.jpg')"
       },
       backgroundColor: {
         primary: "#131920"

@@ -34,15 +34,38 @@
     @apply border-b border-b-primary fixed w-full bg-primary py-4 pb-6
   }
   .header-container {
-    @apply container flex gap-10 justify-center lg:justify-around
+    @apply container flex gap-10 justify-center lg:justify-normal
   }
   .nav-items {
-    @apply font-bold mt-auto mb-[-5px] gap-6 xl:gap-8 text-bright lg:text-small xl:text-base uppercase
+    @apply font-bold mt-auto mb-[-5px] gap-6 xl:gap-8 text-bright lg:text-small xl:text-base uppercase flex grow justify-around
   }
   .sidebar-menu {
     @apply mt-[42px] md:mt-[51.5px]
   }
   .header-menu-toggle {
     @apply top-5 right-4 w-4 h-3 md:top-6 md:right-5
+  }
+  .app {
+    @apply flex flex-col min-h-[100vh]
+  }
+  .home {
+    background-image: linear-gradient(to top, rgba(245, 246, 252, 0) 10%, rgba(19, 25, 32, 1)),
+    url("../img/home-bg.jpg");
+    @apply grow mt-[71px]
+  }
+  .home-container {
+    @apply container flex-row align-middle
+  }
+  .home-details {
+    @apply mt-[5vh] xs:mt-[30vh] sm:mt-[50vh] text-bright px-8 lg:px-0
+  }
+  .home-details-heading {
+    @apply font-medium text-4xl uppercase max-w-[450px]
+  }
+  .home-details-paragraph {
+    @apply font-extralight mt-4 max-w-[700px]
+  }
+  .home-details-link {
+    @apply uppercase mt-6 border p-4 border-2 text-small font-medium
   }
 }

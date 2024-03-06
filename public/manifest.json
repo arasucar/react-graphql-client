@@ -1,6 +1,6 @@
 {
-  "short_name": "SpaceX Launch Analytics",
-  "name": "SpaceX Launch Analytics React GraphQL Client",
+  "short_name": "SpaceX Launch Monitor",
+  "name": "SpaceX Launch Monitor",
   "icons": [
     {
       "src": "favicon.ico",

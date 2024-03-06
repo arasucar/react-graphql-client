@@ -2,7 +2,7 @@
   "name": "react-graphql-client",
   "version": "1.0.0",
   "author": "Aras Ucar",
-  "description": "A React GraphQL client that utilizes apollo-graphql-server to fetch and visualize SpaceX Launch Data.",
+  "description": "A React GraphQL client that utilizes apollo-graphql-server to fetch and monitor SpaceX Launch Data.",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
