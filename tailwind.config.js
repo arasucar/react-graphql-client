@@ -1,10 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var"]
+        sans: ["'16px/26px', 'D-DIN-Regular','Arial','Verdana','sans-serif'"]
+      },
+      backgroundImage: {
+        homepage: "url('../img/homepage-bg.jpg')"
+      },
+      backgroundColor: {
+        primary: "#131920"
+      },
+      borderColor: {
+        primary: "#1D2630"
+      },
+      textColor: {
+        primary: "#8996A4",
+        bright: "#F3F5F7",
+        light: "#BEC8D0"
       },
       spacing: {
         1: "4px",
@@ -26,7 +40,7 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536px"
+      "2xl": "1440px"
     }
   },
   plugins: []

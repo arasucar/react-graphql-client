@@ -2,10 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
-  color: white;
+@layer base {
+  html, body {
+    @apply bg-primary text-primary text-small lg:text-base
+  }
+  .container {
+    @apply mx-auto lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !max-w-screen-2xl;
+  }
+  #root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-small {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@layer components {
+  .logo {
+    @apply flex justify-center lg:justify-normal
+  }
+  .logo img {
+    @apply w-40 md:w-60
+  }
+  .logo-text {
+    @apply mt-auto text-sm ml-[-15px] md:ml-[-20px] lg:ml-[-30px] mb-[-5px]
+  }
+  .header {
+    @apply border-b border-b-primary fixed w-full bg-primary py-4 pb-6
+  }
+  .header-container {
+    @apply container flex gap-10 justify-center lg:justify-around
+  }
+  .nav-items {
+    @apply font-bold mt-auto mb-[-5px] gap-6 xl:gap-8 text-bright lg:text-small xl:text-base uppercase
+  }
+  .sidebar-menu {
+    @apply mt-[42px] md:mt-[51.5px]
+  }
+  .header-menu-toggle {
+    @apply top-5 right-4 w-4 h-3 md:top-6 md:right-5
+  }
 }

@@ -1,14 +1,14 @@
 import React from "react"
 import logo from "../img/logo.svg"
 import "../css/App.css"
+import Header from "./Header"
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <Header />
         <img src={logo} className="App-logo" alt="logo" />
         <p>Launch Statistics coming soon...</p>
-      </header>
     </div>
   )
 }
