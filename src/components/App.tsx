@@ -4,6 +4,7 @@ import Home from "./Home"
 import Footer from "./Footer"
 import { Outlet, Route, Routes } from "react-router"
 import { BrowserRouter } from "react-router-dom"
+import Launches from "./launches/Launches"
 
 const BasicLayout: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<BasicLayout />}>
           <Route index element={<Home />} />
+          <Route path="launches" element={<Launches />} />
         </Route>
       </Routes>
     </BrowserRouter>

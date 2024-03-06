@@ -37,7 +37,8 @@
     @apply container flex gap-10 justify-center lg:justify-normal
   }
   .nav-items {
-    @apply font-bold mt-auto mb-[-5px] gap-6 xl:gap-8 text-bright lg:text-small xl:text-base uppercase flex grow justify-around
+    @apply font-bold mt-auto mb-[-5px] gap-6 xl:gap-8 text-bright
+    lg:text-small xl:text-base uppercase flex grow justify-around
   }
   .sidebar-menu {
     @apply mt-[42px] md:mt-[51.5px]
@@ -69,6 +70,10 @@
     @apply uppercase mt-6 border p-4 border-2 text-small font-medium
   }
   .footer {
-    @apply h-10 fixed bg-transparent bottom-0 w-full text-light flex justify-center uppercase gap-4 sm:gap-8 text-sm sm:text-base
+    @apply h-10 fixed bg-transparent bottom-0 w-full text-light
+    flex justify-center uppercase gap-4 sm:gap-8 text-sm sm:text-base
+  }
+  .launches {
+    @apply grow mt-[59px] md:mt-[71px] container
   }
 }

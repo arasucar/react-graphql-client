@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import React from "react"
-import Home from "./Home"
+import Home from "../Home"
 
 describe("Home Component", () => {
   it("shows heading", () => {

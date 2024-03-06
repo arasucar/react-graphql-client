@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, within } from "@testing-library/react"
 
-import Header from "./Header"
+import Header from "../Header"
 
 describe("Header Component", () => {
   it("shows the header", () => {
