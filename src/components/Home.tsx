@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Home: React.FC = () => {
   return (
@@ -13,9 +14,9 @@ const Home: React.FC = () => {
             application, accessing real-time updates on SpaceX launches, rocket details, and historical data.
           </p>
           <div className="mt-8">
-            <a href="#" className="home-details-link">
+            <Link to="/launches" className="home-details-link">
               View Launch Data
-            </a>
+            </Link>
           </div>
         </div>
       </div>
