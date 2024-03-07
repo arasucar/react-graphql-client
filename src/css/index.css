@@ -61,7 +61,8 @@
     @apply grow mt-[71px] mb-[-40px]
   }
   .home-container {
-    @apply container flex-row align-middle
+    @apply container flex-row align-middle mx-auto
+    lg:max-w-screen-md xl:max-w-screen-lg 2xl:max-w-screen-xl max-w-screen-2xl;
   }
   .home-details {
     @apply mt-[5vh] xs:mt-[30vh] sm:mt-[50vh] text-bright px-8 lg:px-0
@@ -113,7 +114,7 @@
     @apply bg-secondary outline-0 w-40 sm:w-60 lg:w-80
   }
   .launch-cards {
-    @apply rounded-lg flex flex-col gap-4 mt-16 lg:mt-20
+    @apply rounded-lg flex flex-col gap-4 mt-12 lg:mt-16
     text-small xl:text-base
   }
   .launch-card {

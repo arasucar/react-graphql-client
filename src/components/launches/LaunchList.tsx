@@ -14,7 +14,7 @@ const LaunchList: React.FC<{ launches: Launch[] }> = ({ launches }) => {
   }
 
   return (
-    <div data-testid="launch-list">
+    <div className="launch-list" data-testid="launch-list">
       {launches.map((launch, idx) => (
         <div className="launch-card" data-testid="launch-card" onClick={() => handleCardClick(launch)} key={idx}>
           <img src={launch.links.patch} alt="launch_patch" className="launch-card-patch" />
