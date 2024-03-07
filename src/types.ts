@@ -46,3 +46,13 @@ export type QueryResponse = {
     hasNextPage: boolean
   }
 }
+
+export type Sort = {
+  field: string
+  direction: number
+}
+
+export type SelectOption = {
+  label: string
+  value: any
+}
