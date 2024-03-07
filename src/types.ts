@@ -36,3 +36,13 @@ export type Launch = {
   rocket: Rocket
   links: LaunchLinks
 }
+
+export type QueryResponse = {
+  launches: {
+    results: Launch[]
+    totalCount: number
+    totalPages: number
+    page: number
+    hasNextPage: boolean
+  }
+}

@@ -111,11 +111,15 @@
     text-small xl:text-base
   }
   .launch-card {
-    @apply lg:h-40 border border-secondary shadow-xl bg-secondary rounded-lg flex py-4 pointer
+    @apply h-[264px] sm:h-[134px] lg:h-40 border border-secondary shadow-xl bg-secondary rounded-lg flex py-4 pointer
+    flex-col sm:flex-row gap-8 sm:gap-12 px-8 md:gap-6 md:px-6 xl:gap-8 xl:px-8
+  }
+  .loading-card {
+    @apply h-12 lg:h-16 border border-primary shadow-xl bg-primary rounded-lg flex py-4 pointer
     flex-col sm:flex-row gap-8 sm:gap-12 px-8 md:gap-6 md:px-6 xl:gap-8 xl:px-8
   }
   .launch-card-patch {
-    @apply flex flex-row justify-center m-auto max-h-[100px] max-w-[100px] lg:max-h-[126px] lg:max-w-[126px]
+    @apply flex flex-row justify-center m-auto size-[100px] lg:size-[126px]
   }
   .launch-attributes {
     @apply basis-1/2 flex flex-col justify-around
