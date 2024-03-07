@@ -71,7 +71,7 @@ const Header: React.FC = () => {
             <div className="sidebar-menu">
               <ul className="sidebar-menu-inner">
                 {navItems.map((navItem) => (
-                  <Link to={navItem.to} className="nav-item" key={navItem.name}>
+                  <Link to={navItem.to} className="nav-item" key={navItem.name} onClick={() => setMenuOpen(false)}>
                     <li key={navItem.name}>{navItem.name}</li>
                   </Link>
                 ))}

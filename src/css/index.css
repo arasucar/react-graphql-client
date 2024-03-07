@@ -6,17 +6,23 @@
   html, body {
     @apply bg-primary text-primary text-small lg:text-base
   }
-  .container {
-    @apply mx-auto lg:!max-w-screen-md xl:!max-w-screen-lg 2xl:!max-w-screen-xl !max-w-screen-2xl;
-  }
   #root {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
+}
+
+@layer utilities {
   .text-small {
     font-size: 14px;
     line-height: 20px;
+  }
+  .shadow-xl-dark {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+  .pointer {
+    cursor: pointer;
   }
 }
 
@@ -52,7 +58,7 @@
   .home {
     background-image: linear-gradient(to top, rgba(245, 246, 252, 0) 10%, rgba(19, 25, 32, 1)),
     url("../img/home-bg.jpg");
-    @apply grow mt-[71px]
+    @apply grow mt-[71px] mb-[-40px]
   }
   .home-container {
     @apply container flex-row align-middle
@@ -67,13 +73,82 @@
     @apply font-extralight mt-4 max-w-[700px]
   }
   .home-details-link {
-    @apply uppercase mt-6 border p-4 border-2 text-small font-medium
+    @apply uppercase mt-6 border p-4 border-2 text-small font-bold
   }
   .footer {
-    @apply h-10 fixed bg-transparent bottom-0 w-full text-light
+    @apply h-10 bg-transparent bottom-0 w-full text-light
     flex justify-center uppercase gap-4 sm:gap-8 text-sm sm:text-base
   }
   .launches {
-    @apply grow mt-[59px] md:mt-[71px] container
+    @apply grow mt-[62px] md:mt-[71px] container flex flex-col
+  }
+  .launches-heading {
+    @apply text-bright font-bold py-4 w-full fixed text-lg xl:text-xl bg-primary mt-[-4px] lg:mt-0
+  }
+  .launches-inner {
+    @apply lg:flex grow flex-row gap-4 mt-8 lg:mt-10
+  }
+  .launch-filters {
+    @apply border border-primary mt-4 mb-4 rounded-lg fixed
+    h-[calc(100vh-182px)] hidden lg:block lg:w-[220px] xl:w-[252px] 2xl:w-[316px]
+  }
+  .launch-filters-heading {
+    @apply h-16 border-b border-primary text-center my-auto flex flex-col justify-center
+    text-lg xl:text-xl
+  }
+  .launch-filter-placeholder {
+    @apply basis-1/4 hidden lg:flex
+  }
+  .launch-list {
+    @apply lg:basis-3/4 mt-4 mb-4 flex flex-col gap-4
+  }
+  .launch-search {
+    @apply border border-secondary shadow-xl-dark bg-secondary rounded-lg fixed
+    h-12 lg:h-16 w-[264px] sm:w-[584px] md:w-[712px] lg:w-[660px] xl:w-[852px] 2xl:w-[972px]
+  }
+  .launch-cards {
+    @apply rounded-lg flex flex-col gap-4 mt-16 lg:mt-20
+    text-small xl:text-base
+  }
+  .launch-card {
+    @apply lg:h-40 border border-secondary shadow-xl bg-secondary rounded-lg flex py-4 pointer
+    flex-col sm:flex-row gap-8 sm:gap-12 px-8 md:gap-6 md:px-6 xl:gap-8 xl:px-8
+  }
+  .launch-card-patch {
+    @apply flex flex-row justify-center m-auto max-h-[100px] max-w-[100px] lg:max-h-[126px] lg:max-w-[126px]
+  }
+  .launch-attributes {
+    @apply basis-1/2 flex flex-col justify-around
+  }
+  .launch-attribute {
+    @apply flex gap-4
+  }
+  .launch-attribute-name {
+    @apply font-bold w-16
+  }
+  .launch-attributes:last-child {
+    @apply hidden md:flex
+  }
+  .launch-attributes:last-child .launch-attribute-name {
+    @apply font-bold w-24
+  }
+  .launch-attribute-value {
+    @apply text-bright text-nowrap w-[120px] sm:w-[160px] xl:w-[180px] 2xl:w-[200px] text-ellipsis overflow-hidden
+  }
+  .launch-modal-container {
+    @apply flex min-h-full items-center justify-center p-4 text-center
+  }
+  .launch-modal-body {
+    @apply w-full max-w-md transform overflow-hidden rounded-2xl bg-secondary text-left
+    align-middle shadow-xl transition-all border border-secondary
+  }
+  .launch-modal-heading {
+    @apply text-xl font-medium text-bright flex justify-between border-b border-secondary py-4 px-6
+  }
+  .launch-modal-images {
+    @apply flex flex-row gap-4 overflow-y-scroll mb-4
+  }
+  .launch-modal-body .launch-attribute-name{
+    @apply w-36
   }
 }

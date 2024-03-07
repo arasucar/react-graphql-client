@@ -1,10 +1,19 @@
 import { fireEvent, render, screen, within } from "@testing-library/react"
 
 import Header from "../Header"
+import { MemoryRouter } from "react-router"
+
+const renderComponent = () => {
+  render(
+    <MemoryRouter>
+      <Header />
+    </MemoryRouter>
+  )
+}
 
 describe("Header Component", () => {
   it("shows the header", () => {
-    render(<Header />)
+    renderComponent()
 
     const header = screen.getByTestId("header")
     expect(header).toBeInTheDocument()
@@ -12,7 +21,7 @@ describe("Header Component", () => {
   })
 
   it("shows the logo", () => {
-    render(<Header />)
+    renderComponent()
 
     const logo = screen.getByTestId("header-logo")
     expect(logo).toBeInTheDocument()
@@ -20,7 +29,7 @@ describe("Header Component", () => {
   })
 
   it("shows the navigation menu with links", () => {
-    render(<Header />)
+    renderComponent()
 
     const nav = screen.getByTestId("header-nav")
     expect(nav).toBeInTheDocument()
@@ -30,7 +39,7 @@ describe("Header Component", () => {
   })
 
   it("switches between nav menu and header menu with screen width threshold of 1024px", () => {
-    render(<Header />)
+    renderComponent()
 
     const menu = screen.getByTestId("header-menu")
     const nav = screen.getByTestId("header-nav")
@@ -39,14 +48,14 @@ describe("Header Component", () => {
   })
 
   it("shows header menu toggle", () => {
-    render(<Header />)
+    renderComponent()
 
     const toggle = screen.getByTestId("header-menu-toggle")
     expect(toggle).toBeInTheDocument()
   })
 
   it("shows the header menu with links when clicked on the toggle", () => {
-    render(<Header />)
+    renderComponent()
 
     const toggle = screen.getByTestId("header-menu-toggle")
     fireEvent.click(toggle)

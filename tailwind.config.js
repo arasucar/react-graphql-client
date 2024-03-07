@@ -3,17 +3,27 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "2rem",
+          lg: "4rem"
+        }
+      },
       fontFamily: {
-        sans: ["'16px/26px', 'D-DIN-Regular','Arial','Verdana','sans-serif'"]
+        sans: ["'Helvetica', 'Arial', 'sans-serif'"]
       },
       backgroundImage: {
         homepage: "url('../img/home-bg.jpg')"
       },
       backgroundColor: {
-        primary: "#131920"
+        primary: "#131920",
+        secondary: "#1D2630",
+        lighter: "#8996A4"
       },
       borderColor: {
-        primary: "#1D2630"
+        primary: "#1D2630",
+        secondary: "#3E4853"
       },
       textColor: {
         primary: "#8996A4",
